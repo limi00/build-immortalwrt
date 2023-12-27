@@ -82,9 +82,8 @@ jobs:
     - name: 编译固件
       run: |
         cd openwrt
-        make V=s
-      # make -j$(nproc)
-      # echo "FILE_DATE=$(date +"%Y%m%d%H%M")" >> $GITHUB_ENV
+        make -j$(nproc)
+        echo "FILE_DATE=$(date +"%Y%m%d%H%M")" >> $GITHUB_ENV
 
     - name : 上传输出文件
       uses: actions/upload-artifact@master
