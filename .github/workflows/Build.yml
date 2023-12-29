@@ -60,6 +60,7 @@ jobs:
         #echo "src-git kiddin9 https://github.com/kiddin9/openwrt-packages.git" >> ./feeds.conf.default
         rm -rf feeds/luci/applications/luci-app-alist
         rm -rf package/feeds/luci/luci-app-alist
+        #git clone https://github.com/sbwml/luci-app-alist package/alist
         git pull
         ./scripts/feeds update -a
         ./scripts/feeds install -a
