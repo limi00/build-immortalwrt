@@ -60,13 +60,10 @@ jobs:
         echo "src-git kiddin9 https://github.com/kiddin9/openwrt-packages.git" >> ./feeds.conf.default     
         #git pull
         ./scripts/feeds update -a
+        ./scripts/feeds install -a
         rm -rf feeds/luci/applications/luci-app-alist
         rm -rf package/feeds/luci/luci-app-alist
-        rm -rf feeds/kiddin9/openwrt-packages/luci-app-alist
-        rm -rf feeds/packages/lang/golang
-        git clone https://github.com/sbwml/luci-app-alist package/alist
-        svn export https://github.com/sbwml/packages_lang_golang/branches/19.x feeds/packages/lang/golang
-        ./scripts/feeds install -a
+        git clone https://github.com/sbwml/luci-app-alist package/luci-app-alist
         cp -f $GITHUB_WORKSPACE/.config $GITHUB_WORKSPACE/openwrt/
         ./scripts/feeds install -a
 
