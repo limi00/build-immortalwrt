@@ -61,6 +61,8 @@ jobs:
         #git pull
         ./scripts/feeds update -a
         ./scripts/feeds install -a
+        rm -rf package/feeds/kiddin9/alist
+        rm -rf feeds/kiddin9/openwrt-packages.git
         #rm -rf feeds/luci/applications/luci-app-alist
         #rm -rf package/feeds/luci/luci-app-alist
         #git clone https://github.com/sbwml/luci-app-alist package/luci-app-alist
