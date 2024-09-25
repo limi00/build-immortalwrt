@@ -66,7 +66,6 @@ jobs:
         rm -rf feeds/packages/lang/golang
         git clone https://github.com/sbwml/packages_lang_golang -b 23.x feeds/packages/lang/golang
         git clone https://github.com/sbwml/luci-app-alist package/luci-app-alist
-        git clone --depth=1 --single-branch https://github.com/chenmozhijin/turboacc -b package $DOWNLOAD_ROOT_PATH/patch/turboacc
         find ./ | grep Makefile | grep v2ray-geodata | xargs rm -f
         find ./ | grep Makefile | grep mosdns | xargs rm -f
         git clone https://github.com/sbwml/luci-app-mosdns -b v5 package/mosdns
