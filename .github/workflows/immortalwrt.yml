@@ -60,7 +60,7 @@ jobs:
         #sed -i '2i src-git small https://github.com/kenzok8/small' feeds.conf.default
         #git clone https://github.com/sirpdboy/luci-app-lucky.git package/lucky
         #git clone https://github.com/sirpdboy/luci-app-ddns-go.git package/ddns-go
-         echo "src-git openwrt-package https://github.com/shidahuilang/openwrt-package.git' feeds.conf.default
+         echo "src-git openwrt-package https://github.com/shidahuilang/openwrt-package.git" feeds.conf.default
         make menuconfig
         #rm -rf feeds/smpackage/{base-files,dnsmasq,firewall*,fullconenat,libnftnl,nftables,ppp,opkg,ucl,upx,vsftpd*,miniupnpd-iptables,wireless-regdb}
         ./scripts/feeds update -a
