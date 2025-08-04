@@ -20,7 +20,7 @@ env:
 
 jobs:
    xiaomi_mi-router-3g:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-20.04
     permissions:
       contents: write
 
