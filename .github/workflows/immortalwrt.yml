@@ -71,7 +71,6 @@ jobs:
         cp -f $GITHUB_WORKSPACE/.config $GITHUB_WORKSPACE/openwrt/
         ./scripts/feeds install -a
 
-
     - name: 下载依赖
       run: |
         cd openwrt
