@@ -58,8 +58,9 @@ jobs:
       run: |
         cp -f $GITHUB_WORKSPACE/.config $GITHUB_WORKSPACE/openwrt/
         cd openwrt
-      # 下载源码   
-       git clone https://github.com/lmq8267/luci-app-vnt.git package/vnt
+      # 下载源码       
+        sed -i '3i src-git vnt https://github.com/lmq8267/luci-app-vnt.git package/vnt' feeds.conf.default
+        sed -i 's/util/xml/g' /usr/lib/lua/luci/model/cbi/vnt.lua       
       # 编译固件
         make package/vnt/luci-app-vnt/compile V=s
       #客户端程序
