@@ -58,7 +58,6 @@ jobs:
       run: |
         cp -f $GITHUB_WORKSPACE/.config $GITHUB_WORKSPACE/openwrt/
         cd openwrt
-      # 下载源码        
         sed -i '$a src-git custou-packages https://github.com/somemoo/OpenWrt-packages;openwrt' feeds.conf.default
         #sed -i '$a src-git smpackage https://github.com/kenzok8/small-package' feeds.conf.default
         #rm -rf feeds/smpackage/{base-files,dnsmasq,firewall*,fullconenat,libnftnl,nftables,ppp,opkg,ucl,upx,vsftpd*,miniupnpd-iptables,wireless-regdb}
