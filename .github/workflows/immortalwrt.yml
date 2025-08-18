@@ -58,6 +58,7 @@ jobs:
       run: |
         cp -f $GITHUB_WORKSPACE/.config $GITHUB_WORKSPACE/openwrt/
         cd openwrt
+        # 编译ipk
         git clone --depth=1 https://github.com/lmq8267/luci-app-vnt.git package/vnt
         # 编译固件
         #make package/vnt/luci-app-vnt/compile V=s
