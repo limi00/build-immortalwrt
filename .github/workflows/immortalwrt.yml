@@ -65,12 +65,12 @@ jobs:
         find ./ | grep Makefile | grep mosdns | xargs rm -f
         git clone https://github.com/sbwml/luci-app-mosdns -b v5 package/mosdns
         git clone https://github.com/sbwml/v2ray-geodata package/v2ray-geodata
-        #编译vnt
-        git clone --depth=1 https://github.com/lmq8267/luci-app-vnt.git package/vnt
         #编译turboacc
         curl -sSL https://raw.githubusercontent.com/chenmozhijin/turboacc/luci/add_turboacc.sh -o add_turboacc.sh && bash add_turboacc.sh
         #修复ERROR: package/feeds/packages/qt6base [host] failed to build问题
         sed -ri '/^CMAKE_HOST_OPTIONS/r '<(echo -e '\t-DFEATURE_glib=OFF \\') ./feeds/packages/libs/qt6base/Makefile
+        #编译vnt
+        git clone --depth=1 https://github.com/lmq8267/luci-app-vnt.git package/vnt
         # 编译固件
         #make package/vnt/luci-app-vnt/compile V=s
         #客户端程序
