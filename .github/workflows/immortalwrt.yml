@@ -73,9 +73,9 @@ jobs:
         # 编译固件
         #make package/vnt/luci-app-vnt/compile V=s
         #客户端程序
-        make package/vnt/vnt/compile V=s
+        #make package/vnt/vnt/compile V=s
         #服务端程序
-        make package/vnt/vnts/compile V=s
+        #make package/vnt/vnts/compile V=s
         #解决日志错误问题
         #sed -i 's/util/xml/g' /usr/lib/lua/luci/model/cbi/vnt.lua
         
