@@ -64,14 +64,22 @@ jobs:
         git clone https://github.com/sirpdboy/luci-app-lucky.git package/lucky
         # 编译固件
         #make package/lucky/luci-app-lucky/compile V=s
+        
+        #编译partexp分区扩容
+        git clone https://github.com/sirpdboy/luci-app-partexp.git package/luci-app-partexp
+        # 编译固件
+        make package/luci-app-partexp/compile V=s
+        
         #编译mosdns
         # drop mosdns and v2ray-geodata packages that come with the source
         #find ./ | grep Makefile | grep v2ray-geodata | xargs rm -f
         #find ./ | grep Makefile | grep mosdns | xargs rm -f
         #git clone https://github.com/sbwml/luci-app-mosdns -b v5 package/mosdns
         #git clone https://github.com/sbwml/v2ray-geodata package/v2ray-geodata
+        
         #编译turboacc
         #curl -sSL https://raw.githubusercontent.com/chenmozhijin/turboacc/luci/add_turboacc.sh -o add_turboacc.sh && bash add_turboacc.sh
+        
         #编译vnt
         git clone --depth=1 https://github.com/lmq8267/luci-app-vnt.git package/vnt
         # 编译固件
