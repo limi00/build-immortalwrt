@@ -66,9 +66,9 @@ jobs:
         #make package/lucky/luci-app-lucky/compile V=s
         
         #编译partexp分区扩容
-        git clone https://github.com/sirpdboy/luci-app-partexp.git package/luci-app-partexp
+        #git clone https://github.com/sirpdboy/luci-app-partexp.git package/luci-app-partexp
         # 编译固件
-        make package/luci-app-partexp/compile V=s
+        #make package/luci-app-partexp/compile V=s
         
         #编译mosdns
         # drop mosdns and v2ray-geodata packages that come with the source
