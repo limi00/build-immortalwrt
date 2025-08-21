@@ -60,6 +60,10 @@ jobs:
         cd openwrt
         
         # 编译ipk
+        #编译lucky
+        git clone https://github.com/sirpdboy/luci-app-lucky.git package/lucky
+        # 编译固件
+        #make package/lucky/luci-app-lucky/compile V=s
         #编译mosdns
         # drop mosdns and v2ray-geodata packages that come with the source
         #find ./ | grep Makefile | grep v2ray-geodata | xargs rm -f
