@@ -67,7 +67,7 @@ jobs:
         #git clone https://github.com/sbwml/luci-app-mosdns -b v5 package/mosdns
         #git clone https://github.com/sbwml/v2ray-geodata package/v2ray-geodata
         #编译turboacc
-        curl -sSL https://raw.githubusercontent.com/chenmozhijin/turboacc/luci/add_turboacc.sh -o add_turboacc.sh && bash add_turboacc.sh
+        #curl -sSL https://raw.githubusercontent.com/chenmozhijin/turboacc/luci/add_turboacc.sh -o add_turboacc.sh && bash add_turboacc.sh
         #编译vnt
         git clone --depth=1 https://github.com/lmq8267/luci-app-vnt.git package/vnt
         # 编译固件
