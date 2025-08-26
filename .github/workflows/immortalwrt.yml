@@ -59,7 +59,7 @@ jobs:
         cp -f $GITHUB_WORKSPACE/.config $GITHUB_WORKSPACE/openwrt/
         cd openwrt
 
-        sed -ri '/^CMAKE_HOST_OPTIONS/r '<(echo -e '\t-DFEATURE_glib=OFF \\') ./feeds/packages/libs/qt6base/Makefile
+        #sed -ri '/^CMAKE_HOST_OPTIONS/r '<(echo -e '\t-DFEATURE_glib=OFF \\') ./feeds/packages/libs/qt6base/Makefile
         
         # 编译ipk
         #编译lucky
