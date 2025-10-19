@@ -63,9 +63,12 @@ jobs:
         
         # 编译ipk
         #编译lucky
-        git clone https://github.com/sirpdboy/luci-app-lucky.git package/lucky
+        #git clone https://github.com/sirpdboy/luci-app-lucky.git package/lucky
         # 编译固件
         #make package/lucky/luci-app-lucky/compile V=s
+        
+        #编译OpenAppFilter
+        git clone https://github.com/destan19/OpenAppFilter.git package/OpenAppFilter    
         
         #编译partexp分区扩容
         #git clone https://github.com/sirpdboy/luci-app-partexp.git package/luci-app-partexp
@@ -83,7 +86,7 @@ jobs:
         #curl -sSL https://raw.githubusercontent.com/chenmozhijin/turboacc/luci/add_turboacc.sh -o add_turboacc.sh && bash add_turboacc.sh
         
         #编译vnt
-        git clone --depth=1 https://github.com/lmq8267/luci-app-vnt.git package/vnt
+        #git clone --depth=1 https://github.com/lmq8267/luci-app-vnt.git package/vnt
         # 编译固件
         #make package/vnt/luci-app-vnt/compile V=s
         #客户端程序
