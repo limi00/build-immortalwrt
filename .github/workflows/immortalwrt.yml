@@ -95,7 +95,12 @@ jobs:
         #make package/vnt/vnts/compile V=s
         #解决日志错误问题
         #sed -i 's/util/xml/g' /usr/lib/lua/luci/model/cbi/vnt.lua
-        
+
+        rm -rf feeds/packages/lang/golang
+        git clone https://github.com/sbwml/packages_lang_golang -b 23.x feeds/packages/lang/golang
+        #git clone https://github.com/sbwml/luci-app-alist package/alist
+        git clone https://github.com/sbwml/luci-app-openlist2 package/openlist
+      
         #编译软件包程序
         #sed -i '$a src-git kwrtpackages https://github.com/kiddin9/kwrt-packages.git' feeds.conf.default
         #sed -i '$a src-git smpackage https://github.com/kenzok8/small-package' feeds.conf.default
