@@ -86,7 +86,7 @@ jobs:
         #curl -sSL https://raw.githubusercontent.com/chenmozhijin/turboacc/luci/add_turboacc.sh -o add_turboacc.sh && bash add_turboacc.sh
         
         #编译vnt
-        #git clone --depth=1 https://github.com/lmq8267/luci-app-vnt.git package/vnt
+        git clone --depth=1 https://github.com/lmq8267/luci-app-vnt.git package/vnt
         # 编译固件
         #make package/vnt/luci-app-vnt/compile V=s
         #客户端程序
@@ -95,6 +95,7 @@ jobs:
         #make package/vnt/vnts/compile V=s
         #解决日志错误问题
         #sed -i 's/util/xml/g' /usr/lib/lua/luci/model/cbi/vnt.lua
+        
         #编译openlist
         rm -rf feeds/packages/lang/golang
         git clone https://github.com/sbwml/packages_lang_golang -b 23.x feeds/packages/lang/golang
