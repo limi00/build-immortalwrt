@@ -97,10 +97,11 @@ jobs:
         #sed -i 's/util/xml/g' /usr/lib/lua/luci/model/cbi/vnt.lua
         
         #编译openlist
-        rm -rf feeds/packages/lang/golang
-        git clone https://github.com/sbwml/packages_lang_golang -b 23.x feeds/packages/lang/golang
+        git clone https://github.com/Internet1235/luci-app-openlist.git package/openlist
+        #rm -rf feeds/packages/lang/golang
+        #git clone https://github.com/sbwml/packages_lang_golang -b 23.x feeds/packages/lang/golang
         #git clone https://github.com/sbwml/luci-app-alist package/alist
-        git clone https://github.com/sbwml/luci-app-openlist2 package/openlist
+        #git clone https://github.com/sbwml/luci-app-openlist2 package/openlist
       
         #编译软件包程序
         #sed -i '$a src-git kwrtpackages https://github.com/kiddin9/kwrt-packages.git' feeds.conf.default
