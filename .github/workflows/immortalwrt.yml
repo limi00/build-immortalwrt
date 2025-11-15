@@ -41,7 +41,7 @@ jobs:
         libssl-dev libtool lld lldb lrzsz mkisofs msmtp nano ninja-build p7zip p7zip-full patch pkgconf python2.7 \
         python3 python3-pip python3-ply python3-docutils qemu-utils re2c rsync scons squashfs-tools subversion swig \
         texinfo uglifyjs upx-ucl unzip vim wget xmlto xxd zlib1g-dev 
-        #libfuse-dev  #编译luci-app-openlist2使用
+        libfuse-dev  #编译luci-app-openlist2使用
         sudo -E apt-get -y autoremove --purge
         sudo -E apt-get -y clean
         sudo timedatectl set-timezone "$TZ"
@@ -98,11 +98,11 @@ jobs:
         #sed -i 's/util/xml/g' /usr/lib/lua/luci/model/cbi/vnt.lua
         
         #编译openlist
-        git clone https://github.com/Internet1235/luci-app-openlist.git package/openlist
-        #rm -rf feeds/packages/lang/golang
-        #git clone https://github.com/sbwml/packages_lang_golang -b 23.x feeds/packages/lang/golang
+        #git clone https://github.com/Internet1235/luci-app-openlist.git package/openlist
+        rm -rf feeds/packages/lang/golang
+        git clone https://github.com/sbwml/packages_lang_golang -b 23.x feeds/packages/lang/golang
         #git clone https://github.com/sbwml/luci-app-alist package/alist
-        #git clone https://github.com/sbwml/luci-app-openlist2 package/openlist
+        git clone https://github.com/sbwml/luci-app-openlist2 package/openlist
       
         #编译软件包程序
         #sed -i '$a src-git kwrtpackages https://github.com/kiddin9/kwrt-packages.git' feeds.conf.default
