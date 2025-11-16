@@ -109,9 +109,10 @@ jobs:
         #编译openlist
         rm -rf feeds/packages/lang/golang
         git clone https://github.com/sbwml/packages_lang_golang -b 23.x feeds/packages/lang/golang
-        git clone https://github.com/Internet1235/luci-app-openlist.git package/openlist
+        #git clone https://github.com/Internet1235/luci-app-openlist.git package/openlist
         #git clone https://github.com/sbwml/luci-app-alist package/alist
-        #git clone https://github.com/sbwml/luci-app-openlist2 package/openlist
+        git clone https://github.com/sbwml/luci-app-openlist2 package/openlist
+        make package/openlist/luci-app-openlist2/compile V=s
         cp -f $GITHUB_WORKSPACE/.config $GITHUB_WORKSPACE/openwrt/
         ./scripts/feeds update -a
         ./scripts/feeds install -a
