@@ -17,6 +17,7 @@ env:
   TZ: Asia/Shanghai
   DEVICE: xiaomi_mi-router-3g
   UPLOAD_OUTPUT: true
+  SSH_AFTER_PREPARE: false
 
 jobs:
    xiaomi_mi-router-3g:
@@ -125,6 +126,16 @@ jobs:
         make download -j8
         find dl -size -1024c -exec ls -l {} \;
         find dl -size -1024c -exec rm -f {} \;
+
+    # ========== 🔑 SSH 调试入口 ==========
+    - name: 🔑 开启 SSH 调试 (SSH Debug)
+      if: ${{ inputs.ssh == 'true' }}
+      uses: mxschmitt/action-tmate@v3
+      timeout-minutes: 40
+      with:
+        limit-access-to-actor: true
+        github-token: ${{ github.token }}
+    # =====================================
 
     - name: 编译固件
       id: compile
